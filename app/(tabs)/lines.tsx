@@ -24,6 +24,8 @@ type TripType = {
   shape_id: string;
   direction_id: number;
   trip_headsign: string;
+  start_name: string;
+  end_name: string;
 };
 
 export default function LinesScreen() {
@@ -134,11 +136,7 @@ export default function LinesScreen() {
                     style={styles.tripCard}
                   >
                     <Text style={styles.tripText}>
-                      {trip.trip_headsign || "Fahrt"}
-                    </Text>
-
-                    <Text style={styles.tripSub}>
-                      Richtung {trip.direction_id}
+                      {trip.start_name || "Fahrt"} - {trip.end_name}
                     </Text>
                   </Pressable>
                 ))}
@@ -212,11 +210,5 @@ const styles = StyleSheet.create({
   tripText: {
     color: "white",
     fontSize: 14,
-  },
-
-  tripSub: {
-    color: "#aaa",
-    fontSize: 11,
-    marginTop: 2,
   },
 });
