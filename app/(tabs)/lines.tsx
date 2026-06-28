@@ -136,7 +136,11 @@ export default function LinesScreen() {
                     style={styles.tripCard}
                   >
                     <Text style={styles.tripText}>
-                      {trip.start_name || "Fahrt"} - {trip.end_name}
+                      {trip.start_name}
+                    </Text>
+
+                    <Text style={styles.tripSub}>
+                      nach {trip.end_name}
                     </Text>
                   </Pressable>
                 ))}
@@ -210,5 +214,11 @@ const styles = StyleSheet.create({
   tripText: {
     color: "white",
     fontSize: 14,
+  },
+
+  tripSub: {
+    color: "#aaa",
+    fontSize: 11,
+    marginTop: 2,
   },
 });

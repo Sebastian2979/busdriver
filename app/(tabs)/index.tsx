@@ -7,6 +7,7 @@ const tiles = [
   { label: "Karte", route: "/map" },
   { label: "Abfahrten", route: "/departures" },
   { label: "Settings", route: "/profile" },
+  { label: "Test", route: "/test" },
 ];
 
 export default function HomeScreen() {
